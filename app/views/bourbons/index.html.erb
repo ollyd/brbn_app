@@ -1,0 +1,65 @@
+<h1>Listing bourbons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Alcohol</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Toffee</th>
+      <th>Woody</th>
+      <th>Tannic</th>
+      <th>Char</th>
+      <th>Sweet</th>
+      <th>Grainy</th>
+      <th>Vanilla</th>
+      <th>Corny</th>
+      <th>Buttery</th>
+      <th>Heat</th>
+      <th>Dark fruit</th>
+      <th>Citrus fruit</th>
+      <th>Floral</th>
+      <th>Spicy</th>
+      <th>Herbal</th>
+      <th>Malty</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bourbons.each do |bourbon| %>
+      <tr>
+        <td><%= bourbon.name %></td>
+        <td><%= bourbon.alcohol %></td>
+        <td><%= bourbon.image %></td>
+        <td><%= bourbon.description %></td>
+        <td><%= bourbon.toffee %></td>
+        <td><%= bourbon.woody %></td>
+        <td><%= bourbon.tannic %></td>
+        <td><%= bourbon.char %></td>
+        <td><%= bourbon.sweet %></td>
+        <td><%= bourbon.grainy %></td>
+        <td><%= bourbon.vanilla %></td>
+        <td><%= bourbon.corny %></td>
+        <td><%= bourbon.buttery %></td>
+        <td><%= bourbon.heat %></td>
+        <td><%= bourbon.dark_fruit %></td>
+        <td><%= bourbon.citrus_fruit %></td>
+        <td><%= bourbon.floral %></td>
+        <td><%= bourbon.spicy %></td>
+        <td><%= bourbon.herbal %></td>
+        <td><%= bourbon.malty %></td>
+        <td><%= link_to 'Show', bourbon %></td>
+        <td><%= link_to 'Edit', edit_bourbon_path(bourbon) %></td>
+        <td><%= link_to 'Destroy', bourbon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bourbon', new_bourbon_path %>

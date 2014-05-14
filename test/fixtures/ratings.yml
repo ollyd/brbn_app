@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: ratings
+#
+#  id         :integer          not null, primary key
+#  score      :integer          default(0)
+#  bourbon_id :integer
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score: 1
+  default: MyString
+  0: MyString
+
+two:
+  score: 1
+  default: MyString
+  0: MyString

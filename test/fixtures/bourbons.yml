@@ -1,0 +1,74 @@
+# == Schema Information
+#
+# Table name: bourbons
+#
+#  id           :integer          not null, primary key
+#  name         :string(255)
+#  alcohol      :integer
+#  image        :text
+#  description  :text
+#  toffee       :integer
+#  woody        :integer
+#  tannic       :integer
+#  char         :integer
+#  sweet        :integer
+#  grainy       :integer
+#  vanilla      :integer
+#  corny        :integer
+#  buttery      :integer
+#  heat         :integer
+#  dark_fruit   :integer
+#  citrus_fruit :integer
+#  floral       :integer
+#  spicy        :integer
+#  herbal       :integer
+#  malty        :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alcohol: 1
+  image: MyText
+  description: MyText
+  toffee: 1
+  woody: 1
+  tannic: 1
+  char: 1
+  sweet: 1
+  grainy: 1
+  vanilla: 1
+  corny: 1
+  buttery: 1
+  heat: 1
+  dark_fruit: 1
+  citrus_fruit: 1
+  floral: 1
+  spicy: 1
+  herbal: 1
+  malty: 1
+
+two:
+  name: MyString
+  alcohol: 1
+  image: MyText
+  description: MyText
+  toffee: 1
+  woody: 1
+  tannic: 1
+  char: 1
+  sweet: 1
+  grainy: 1
+  vanilla: 1
+  corny: 1
+  buttery: 1
+  heat: 1
+  dark_fruit: 1
+  citrus_fruit: 1
+  floral: 1
+  spicy: 1
+  herbal: 1
+  malty: 1

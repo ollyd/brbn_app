@@ -1,0 +1,1 @@
+json.extract! @bourbon, :id, :name, :alcohol, :image, :description, :toffee, :woody, :tannic, :char, :sweet, :grainy, :vanilla, :corny, :buttery, :heat, :dark_fruit, :citrus_fruit, :floral, :spicy, :herbal, :malty, :created_at, :updated_at
