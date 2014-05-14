@@ -11,10 +11,11 @@ BrbnApp.Views.Layouts.Unauthenticated = Backbone.Marionette.Layout.extend({
   },
 
   onShow: function() {
+    this.views.search = BrbnApp.Views.Unauthenticated.Search;
     this.views.login = BrbnApp.Views.Unauthenticated.Login;
     this.views.signup = BrbnApp.Views.Unauthenticated.Signup;
     this.views.retrievePassword = BrbnApp.Views.Unauthenticated.RetrievePassword;
-    this.tabContent.show(new this.views.login);
+    this.tabContent.show(new this.views.search);
   },
 
   switchViews: function(e) {

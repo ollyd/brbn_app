@@ -4,12 +4,12 @@ Bourbon.destroy_all
 Rating.destroy_all
 
 # Users' Seed
-u1 = User.create(:email => 'bob@gmail.com', :password => 'bobby', :password_confirmation => 'bobby')
-u2 = User.create(:email => 'anne@gmail.com', :password => 'anne', :password_confirmation => 'anne')
-u3 = User.create(:email => 'sue@gmail.com', :password => 'suzy', :password_confirmation => 'suzy')
-u4 = User.create(:email => 'mike@gmail.com', :password => 'mike', :password_confirmation => 'mike')
-u5 = User.create(:email => 'joe@gmail.com', :password => 'joey', :password_confirmation => 'joey')
-u6 = User.create(:email => 'billy@gmail.com', :password => 'billy', :password_confirmation => 'billy')
+u1 = User.create(:email => 'bob@gmail.com', :password => 'bobby1234', :password_confirmation => 'bobby1234')
+u2 = User.create(:email => 'anne@gmail.com', :password => 'anne1234', :password_confirmation => 'anne1234')
+u3 = User.create(:email => 'sue@gmail.com', :password => 'suzy1234', :password_confirmation => 'suzy1234')
+u4 = User.create(:email => 'mike@gmail.com', :password => 'mike1234', :password_confirmation => 'mike1234')
+u5 = User.create(:email => 'joe@gmail.com', :password => 'joey1234', :password_confirmation => 'joey1234')
+u6 = User.create(:email => 'billy@gmail.com', :password => 'billy1234', :password_confirmation => 'billy1234')
 
 # Admin's Seed
 # admin = Admin.create(:username => 'admin', :email => 'admin@admin.com', :password => 'admin', :password_confirmation => 'admin', :admin => true)

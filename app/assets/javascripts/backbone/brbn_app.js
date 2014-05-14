@@ -43,10 +43,10 @@ BrbnApp.bind("initialize:after", function() {
 });
 
 // Instantiate router once data has been fetched, then listen for URL changes
-// $(document).ready(function () {
-//     BrbnApp.brbns = new BrbnApp.Collections.Bourbons();
-//     BrbnApp.brbns.fetch().done(function () {
-//         BrbnApp.router = new BrbnApp.Routers.appRouter();
-//         Backbone.history.start({pushState: false});
-//     });
-// });
+$(document).ready(function () {
+    BrbnApp.brbns = new BrbnApp.Collections.Bourbons();
+    BrbnApp.brbns.fetch().done(function () {
+        BrbnApp.router = new BrbnApp.Routers.appRouter();
+        Backbone.history.start({pushState: false});
+    });
+});
