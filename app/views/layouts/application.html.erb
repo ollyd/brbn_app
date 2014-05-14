@@ -3,12 +3,22 @@
 <head>
   <title>Brbn</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+->
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.modelbinder/1.0.5/Backbone.ModelBinder.min.js"></script>
 </head>
 <body>
 
 <%= yield %>
 
+  <script type="text/javascript">
+    <% if signed_in? -%>
+      BrbnApp.currentUser = new BrbnApp.Models.User(<%= current_user.to_json.html_safe %>);
+    <% else -%>
+      BrbnApp.currentUser = null;
+    <% end -%>
+    BrbnApp.start();
+  </script>
 </body>
 </html>

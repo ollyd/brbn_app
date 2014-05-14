@@ -12,10 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require underscore
-//= require backbone
-//= require backbone_rails_sync
-//= require backbone_datalink
+//= require underscore-min
+//= require backbone-min
+//= require backbone.marionette
+//= //require backbone_rails_sync
+//= //require backbone_datalink
+//= require handlebars
 //= require backbone/brbn_app
+//= require bootstrap
+//= require monkeys
 //= require_tree .

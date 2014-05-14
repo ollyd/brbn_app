@@ -10,18 +10,43 @@ _.templateSettings = {
   interpolate: /\{\{(.+?)\}\}/g
 };
 
-window.BrbnApp = {
-  Models: {},
-  Collections: {},
-  Routers: {},
-  Views: {}
-}
+window.BrbnApp = new Backbone.Marionette.Application();
+
+BrbnApp.Models = {};
+BrbnApp.Collections = {};
+BrbnApp.Routers = {};
+BrbnApp.Views = {};
+BrbnApp.Views.Layouts = {};
+BrbnApp.Helpers = {};
+
+// Instantiated global layouts
+BrbnApp.layouts = {};
+BrbnApp.addRegions({
+  main: '#main'
+});
+
+BrbnApp.vent.on("authentication:logged_in", function() {
+  BrbnApp.main.show(BrbnApp.layouts.main);
+});
+
+BrbnApp.vent.on("authentication:logged_out", function() {
+  BrbnApp.main.show(BrbnApp.layouts.unauthenticated);
+});
+
+BrbnApp.bind("initialize:after", function() {
+  if(BrbnApp.currentUser) {
+    BrbnApp.vent.trigger("authentication:logged_in");
+  }
+  else {
+    BrbnApp.vent.trigger("authentication:logged_out");
+  }
+});
 
 // Instantiate router once data has been fetched, then listen for URL changes
-$(document).ready(function () {
-    BrbnApp.brbns = new BrbnApp.Collections.Bourbons();
-    BrbnApp.brbns.fetch().done(function () {
-        BrbnApp.router = new BrbnApp.Routers.appRouter();
-        Backbone.history.start({pushState: false});
-    });
-});
+// $(document).ready(function () {
+//     BrbnApp.brbns = new BrbnApp.Collections.Bourbons();
+//     BrbnApp.brbns.fetch().done(function () {
+//         BrbnApp.router = new BrbnApp.Routers.appRouter();
+//         Backbone.history.start({pushState: false});
+//     });
+// });

@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -38,9 +38,10 @@ gem 'protected_attributes'
 gem 'rails_12factor'
 gem 'thread_safe', '0.2.0'
 gem 'devise'
-gem 'rails-backbone'
+#gem 'rails-backbone'
 gem 'modernizr-rails'
-gem 'underscore-rails'
+#gem 'underscore-rails'
+gem 'handlebars_assets'
 
 
 group :development do
