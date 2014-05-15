@@ -36,3 +36,28 @@ input#email,
 input.btn-primary {
     margin-top: 20px;
 }
+
+/* Chart style */
+
+#chart {
+  height: 500px;
+}
+
+.axis {
+    shape-rendering: crispEdges;
+}
+
+.axis line {
+    stroke: #000000;
+    stroke-width: 2px;
+}
+
+.axis .ticks line {
+    stroke: #4F4F4F;
+    stroke-width: 2px;
+}
+
+.axis .ticks line.minor{
+    stroke: #CCCCCC;
+    stroke-width:1px;
+}

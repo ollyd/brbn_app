@@ -22,4 +22,6 @@
 //= require backbone/brbn_app
 //= require bootstrap
 //= require monkeys
+//= require d3.min.js
+//= require RadarChart.js
 //= require_tree .
