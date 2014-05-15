@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.raty.min.js
 //= require underscore-min
 //= require backbone-min
 //= require backbone.marionette

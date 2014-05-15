@@ -6,11 +6,13 @@ BrbnApp.Routers.appRouter = Backbone.Router.extend({
   },
 
   index: function () {
-    var view = new BrbnApp.Views.Layouts.Unauthenticated;
+    var view = new BrbnApp.Views.Layouts.Main;
     view.render();
   },
 
   showBourbon: function (id) {
+    console.log('showing', id);
+    // debugger;
     var bourbon = BrbnApp.brbns.get(id);
     new BrbnApp.Views.BourbonView({model:bourbon});
   },
