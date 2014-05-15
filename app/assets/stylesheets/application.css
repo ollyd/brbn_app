@@ -40,8 +40,12 @@ input.btn-primary {
 /* Chart style */
 
 #chart {
-  height: 500px;
+  height: 600px;
 }
+
+svg {
+  width: 200;
+} 
 
 .axis {
     shape-rendering: crispEdges;

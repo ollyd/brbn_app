@@ -11,6 +11,11 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
     // debugger;
     this.render();
     d3.select("#chart").append("svg"); 
+    $('#star').raty({
+      path: 'assets/images',
+      readOnly: true, score: 3,
+      width: 200
+    });
 
     var w = 500,
         h = 500;
@@ -19,16 +24,6 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     //Legend titles
     var LegendOptions = [this.model.attributes.name,'Bourbon B'];
-
-    // var self = this;
-    //   this.bourbons.fetch({
-    //       success: function () {
-    //           self.bourbons.each(function (b) {
-    //               console.log('bourbon', b.attributes);
-    //               $('<li>' + b.attributes.name + '</li>').data('bourbon-id', b.attributes.id).appendTo('#bourbons');
-    //           })
-    //       }
-    //   });
 
     //Data
     var d = [
