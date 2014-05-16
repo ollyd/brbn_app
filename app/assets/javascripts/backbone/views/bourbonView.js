@@ -8,14 +8,29 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
   },
 
   initialize: function () {
-    // debugger;
-    this.render();
-    d3.select("#chart").append("svg"); 
+
+  this.render();
+
+  // Work out the average user ratings for the borubon being shown 
+  var starTotal = 0;
+  for (var i = 0; i < this.model.attributes.ratings.length; i++) {
+      starTotal += this.model.attributes.ratings[i].score;
+  }   
+  var starAvg = starTotal / this.model.attributes.ratings.length;
+      
+  // Display bourbon star rating 
     $('#star').raty({
-      path: 'assets/images',
-      readOnly: true, score: 3,
+      path: 'assets/',
+      readOnly: true, score: starAvg,
       width: 200
     });
+
+  //////////////////////////////////////
+  //////// BOURBON WHEEL CHART ////////
+  ////////////////////////////////////
+
+  // Add Radar Chart to chart div  
+    d3.select("#chart").append("svg"); 
 
     var w = 500,
         h = 500;
@@ -68,8 +83,8 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
     var mycfg = {
       w: w,
       h: h,
-      maxValue: 0.6,
-      levels: 6,
+      maxValue: 1,
+      levels: 10,
       ExtraWidthX: 300
     }
 
@@ -77,9 +92,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
     //Will expect that data is in %'s
     RadarChart.draw("#chart", d, mycfg);
 
-    ////////////////////////////////////////////
     /////////// Initiate legend ////////////////
-    ////////////////////////////////////////////
 
     var svg = d3.select('#main')
       .selectAll('svg')
@@ -129,9 +142,20 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     },
 
+    /////////////////////////////////////////
+   /////// BOURBON MATCH % INDICATOR ///////
+  /////////////////////////////////////////
+
     rateBourbon: function () {
-      console.log('This will be a rating');
       event.preventDefault();
-      this.$el.append("<div>" + "test" + "</div>");
+      // this.$el.append(
+      $('#user-rating').raty({
+        score: function() {
+          return $(this).attr('data-score');
+        },
+        path: 'assets/',
+        width: 200
+      });
+      console.log(data-score);
     }
 });

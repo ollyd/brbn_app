@@ -40,7 +40,8 @@ input.btn-primary {
 /* Chart style */
 
 #chart {
-  height: 600px;
+  width: 50%;
+  height: 50%;
 }
 
 svg {
