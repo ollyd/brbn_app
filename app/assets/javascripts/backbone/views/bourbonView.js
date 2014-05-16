@@ -9,6 +9,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
   initialize: function () {
 
+  this.listenTo(this, 'render', this.afterRender);
   this.render();
 
   // Work out the average user ratings for the borubon being shown 
@@ -94,7 +95,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     /////////// Initiate legend ////////////////
 
-    var svg = d3.select('#main')
+    var svg = d3.select('#chart')
       .selectAll('svg')
       .append('svg')
       .attr("width", w+300)
@@ -142,10 +143,6 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     },
 
-    /////////////////////////////////////////
-   /////// BOURBON MATCH % INDICATOR ///////
-  /////////////////////////////////////////
-
     rateBourbon: function () {
       event.preventDefault();
       // this.$el.append(
@@ -157,5 +154,15 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         width: 200
       });
       console.log(data-score);
+    },
+
+    afterRender: function() {
+      // debugger;
+      console.log('in afterRender');
+      var view = new BrbnApp.Views.percentageView();
+      $('#percentage-container').append(view.render().el); 
+  
     }
+    
+
 });
