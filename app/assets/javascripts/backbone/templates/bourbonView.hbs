@@ -1,14 +1,32 @@
-<div id="bourbon">
-  <div> 
-    <img src="{{ image }}">
-    <p><strong>{{ name }}</strong></p>
-    <p><strong>Alcohol: </strong> {{ alcohol }}%</p>
-    <p><strong>Description: </strong> {{ description }}</p>
-  </div>  
-  <div id="star">Avg Rating: </div>
-  <div id="chart"></div>
-    <button class="btn btn-success">Rate It</button>
-    <button class="btn btn-info"><a href='#'>Back</a></button> 
-  <div id="user-rating" data-score="0"></div>
-</div>
-<div id="percentage-container"></div> 
+<section class="wrapper-md bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+              <h2>{{ name }}</h2>
+              <h5><div id="star">Avg Rating: </div></h5>
+              <hr>
+                  <div class="row">
+                      <div id="bourbon">
+                          <div class="col-sm-12 col-md-6">
+                          <img src="{{ image }}" class="img-responsive">  
+                          </div>
+                              <div class="col-sm-12 col-md-6">
+                                  <div id="description">
+                                    <h3>Description</h3>
+                                  </div>
+                                  <p>{{ description }}</p>
+                                  <h5>Alcohol: {{ alcohol }}%</h5>
+                                    <div id="percentage-container"></div> 
+                                  <div class="col-md-4">
+                                    <button class="btn btn-success">Rate It</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  <div id="chart"></div>
+                  <button class="btn btn-info"><a href='#'>Back</a></button> 
+                <div id="user-rating" data-score="0"></div>
+            </div>  
+        </div>  
+    </div>
+</section>      

@@ -90,6 +90,7 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
+  margin: 50px;
 }
 figure {
   margin: 1em 40px;
@@ -277,7 +278,8 @@ body {
   font-size: 15px;
   line-height: 1.42857143;
   color: #222222;
-  background-color: #ffffff;
+  background: url('background.jpg'); 
+  background-repeat: repeat;
 }
 input,
 button,
@@ -315,6 +317,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: auto;
 }
 .img-rounded {
   border-radius: 0;
@@ -350,7 +353,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-h1,
+/*h1,
 h2,
 h3,
 h4,
@@ -366,7 +369,7 @@ h6,
   font-weight: 300;
   line-height: 1.1;
   color: inherit;
-}
+}*/
 h1 small,
 h2 small,
 h3 small,
@@ -402,7 +405,7 @@ h2,
 h3,
 .h3 {
   margin-top: 21px;
-  margin-bottom: 10.5px;
+  margin-bottom: 22.5px;
 }
 h1 small,
 .h1 small,

@@ -56,7 +56,7 @@ var RadarChart = {
        .attr("class", "line")
        .style("stroke", "grey")
        .style("stroke-opacity", "0.75")
-       .style("stroke-width", "0.3px")
+       .style("stroke-width", "0.2px")
        .attr("transform", "translate(" + (cfg.w/2-levelFactor) + ", " + (cfg.h/2-levelFactor) + ")");
     }
 

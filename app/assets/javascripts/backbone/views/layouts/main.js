@@ -5,7 +5,8 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
   },
 
   events: {
-    'click': 'viewBourbon'
+    'click li': 'viewBourbon'
+    'submit form': 'search'
   },
 
   initialize: function() {
@@ -18,7 +19,6 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
     this.bourbons.fetch({
         success: function () {
             self.bourbons.each(function (b) {
-                console.log('bourbon', b.attributes);
                 $('<li>' + b.attributes.name + '</li>').data('bourbon-id', b.attributes.id).appendTo('#bourbons');
             })
         }
