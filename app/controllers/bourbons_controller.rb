@@ -15,20 +15,24 @@ class BourbonsController < ApplicationController
   # GET /bourbons/1
   # GET /bourbons/1.json
   def show
-     #store selected bourbon ID and all other bourbons into two variables
+     # store selected bourbon ID and all other bourbons (except current ID into two variables)
      bourbon1 = Bourbon.find(params[:id])
-     bourbons = Bourbon.all #_except(current_id)
+     bourbons = Bourbon.all.where('id != ?', bourbon1.id)
      # store % scores after calculated in the .compare method
-     results = {}
+     @results = {}
      # loop through and compare each bourbon
      bourbons.each do |bourbon|
         score = Bourbon.compare(bourbon1, bourbon)
         # store each bourbon ID in the hash with score as the key
-        results[score] = bourbon.id
+        @results[score] = bourbon.id
      end
-     binding.pry
      # show nearest high score
-     results.keys.max
+     # @results.keys.max
+
+     respond_to do |format|
+      format.html 
+      format.json { render json: @results }
+    end
   end
 
   # GET /bourbons/new
