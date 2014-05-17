@@ -6,7 +6,7 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
 
   events: {
     'click li': 'viewBourbon'
-    'submit form': 'search'
+    // 'submit form': 'search'
   },
 
   initialize: function() {

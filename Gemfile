@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pry-rails'
 gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'protected_attributes'

@@ -15,7 +15,7 @@ u6 = User.create(:email => 'billy@gmail.com', :password => 'billy1234', :passwor
 # admin = Admin.create(:username => 'admin', :email => 'admin@admin.com', :password => 'admin', :password_confirmation => 'admin', :admin => true)
 
 # Bourbons
-b1 = Bourbon.create(:name => 'Pappy Van Winkle\'s 23yr', :alcohol => 47.8, :image => 'http://oldripvanwinkle.com/wp-content/uploads/2011/10/23ylabel1.jpg', 
+b1 = Bourbon.create(:name => 'Pappy Van Winkle\'s 23yr', :alcohol => 47.8, :image => 'http://www.vanityfair.com/style/punchs-picks/2013/09/cult-favorites-celine-handbag-photos.sl.20.punchs-cult-favorites-ss18.png', 
     :description => 'Dubbed the world\'s most sought after bourbon, this bottling of Pappy Van Winkle’s Family Reserve is aged for 23 years. It has a rich copper color with 
                     fruity, buttery caramel fudge, roasted pecans, and fine brown spice aromas. With a medium-full body and a long, lingering cherry tobacco, 
                     toffee, raisin toast, charcoal, and peppery spice finish. A sensationally flavourful and deep bourbon for sipping or cocktails.', 

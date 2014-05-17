@@ -16,7 +16,7 @@ class Rating < ActiveRecord::Base
     belongs_to :user
     belongs_to :bourbon
 
-    def average_rating
-        ratings.sum(:score) / ratings.size
-    end
+    # def average_rating
+    #     ratings.sum(:score) / ratings.size
+    # end
 end
