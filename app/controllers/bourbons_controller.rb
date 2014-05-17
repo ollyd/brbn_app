@@ -26,6 +26,7 @@ class BourbonsController < ApplicationController
         # store each bourbon ID in the hash with score as the key
         results[score] = bourbon.id
      end
+     binding.pry
      # show nearest high score
      results.keys.max
   end

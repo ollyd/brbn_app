@@ -59,253 +59,164 @@ class Bourbon < ActiveRecord::Base
             toffee_similarity = toffee_var + 100
         elsif (toffee_var != 0.0) && (bourbon1.toffee >= bourbon2.toffee)
             toffee_percentage_dif = toffee_var / bourbon1.toffee.to_f * 100
+            toffee_similarity = 100 - toffee_percentage_dif
         else (toffee_var != 0.0) && (bourbon1.toffee < bourbon2.toffee)
             toffee_percentage_dif = toffee_var / bourbon2.toffee.to_f * 100
+            toffee_similarity = 100 - toffee_percentage_dif
         end
             
         if woody_var == 0.0
             woody_similarity = woody_var + 100
         elsif (woody_var != 0.0) && (bourbon1.woody >= bourbon2.woody)
             woody_percentage_dif = woody_var / bourbon1.woody.to_f * 100
+            woody_similarity = 100 - woody_percentage_dif
         else (woody_var != 0.0) && (bourbon1.woody < bourbon2.woody)
             woody_percentage_dif = woody_var / bourbon2.woody.to_f * 100
+            woody_similarity = 100 - woody_percentage_dif
         end
 
         if tannic_var == 0.0
             tannic_similarity = tannic_var + 100
         elsif (tannic_var != 0.0) && (bourbon1.tannic >= bourbon2.tannic)
             tannic_percentage_dif = tannic_var / bourbon1.tannic.to_f * 100
+            tannic_similarity = 100 - tannic_percentage_dif
         else (tannic_var != 0.0) && (bourbon1.tannic < bourbon2.tannic)
             tannic_percentage_dif = tannic_var / bourbon2.tannic.to_f * 100
+            tannic_similarity = 100 - tannic_percentage_dif
         end
 
         if char_var == 0.0
             char_similarity = char_var + 100
         elsif (char_var != 0.0) && (bourbon1.char >= bourbon2.char)
             char_percentage_dif = char_var / bourbon1.char.to_f * 100
+            char_similarity = 100 - char_percentage_dif
         else (char_var != 0.0) && (bourbon1.char < bourbon2.char)
             char_percentage_dif = char_var / bourbon2.char.to_f * 100
+            char_similarity = 100 - char_percentage_dif
         end
 
         if sweet_var == 0.0
             sweet_similarity = sweet_var + 100
         elsif (sweet_var != 0.0) && (bourbon1.sweet >= bourbon2.sweet)
             sweet_percentage_dif = sweet_var / bourbon1.sweet.to_f * 100
+            sweet_similarity = 100 - sweet_percentage_dif
         else (sweet_var != 0.0) && (bourbon1.sweet < bourbon2.sweet)
             sweet_percentage_dif = sweet_var / bourbon2.sweet.to_f * 100
+            sweet_similarity = 100 - sweet_percentage_dif
         end
 
         if grainy_var == 0.0
             grainy_similarity = grainy_var + 100
         elsif (grainy_var != 0.0) && (bourbon1.grainy >= bourbon2.grainy)
             grainy_percentage_dif = grainy_var / bourbon1.grainy.to_f * 100
+            grainy_similarity = 100 - grainy_percentage_dif
         else (grainy_var != 0.0) && (bourbon1.grainy < bourbon2.grainy)
             grainy_percentage_dif = grainy_var / bourbon2.grainy.to_f * 100
+            grainy_similarity = 100 - grainy_percentage_dif
         end
 
         if vanilla_var == 0.0
             vanilla_similarity = vanilla_var + 100
         elsif (vanilla_var != 0.0) && (bourbon1.vanilla >= bourbon2.vanilla)
             vanilla_percentage_dif = vanilla_var / bourbon1.vanilla.to_f * 100
+            vanilla_similarity = 100 - vanilla_percentage_dif
         else (vanilla_var != 0.0) && (bourbon1.vanilla < bourbon2.vanilla)
             vanilla_percentage_dif = vanilla_var / bourbon2.vanilla.to_f * 100
+            vanilla_similarity = 100 - vanilla_percentage_dif
         end
 
         if corny_var == 0.0
             corny_similarity = corny_var + 100
         elsif (corny_var != 0.0) && (bourbon1.corny >= bourbon2.corny)
             corny_percentage_dif = corny_var / bourbon1.corny.to_f * 100
+            corny_similarity = 100 - corny_percentage_dif
         else (corny_var != 0.0) && (bourbon1.corny < bourbon2.corny)
             corny_percentage_dif = corny_var / bourbon2.corny.to_f * 100
+            corny_similarity = 100 - corny_percentage_dif
         end
 
         if buttery_var == 0.0
             buttery_similarity = buttery_var + 100
         elsif (buttery_var != 0.0) && (bourbon1.buttery >= bourbon2.buttery)
             buttery_percentage_dif = buttery_var / bourbon1.buttery.to_f * 100
+            buttery_similarity = 100 - buttery_percentage_dif
         else (buttery_var != 0.0) && (bourbon1.buttery < bourbon2.buttery)
             buttery_percentage_dif = buttery_var / bourbon2.buttery.to_f * 100
+            buttery_similarity = 100 - buttery_percentage_dif
         end
 
         if heat_var == 0.0
             heat_similarity = heat_var + 100
         elsif (heat_var != 0.0) && (bourbon1.heat >= bourbon2.heat)
             heat_percentage_dif = heat_var / bourbon1.heat.to_f * 100
+            heat_similarity = 100 - heat_percentage_dif
         else (heat_var != 0.0) && (bourbon1.heat < bourbon2.heat)
             heat_percentage_dif = heat_var / bourbon2.heat.to_f * 100
+            heat_similarity = 100 - heat_percentage_dif
         end
 
         if dark_fruit_var == 0.0
             dark_fruit_similarity = dark_fruit_var + 100
         elsif (dark_fruit_var != 0.0) && (bourbon1.dark_fruit >= bourbon2.dark_fruit)
             dark_fruit_percentage_dif = dark_fruit_var / bourbon1.dark_fruit.to_f * 100
+            dark_fruit_similarity = 100 - dark_fruit_percentage_dif
         else (dark_fruit_var != 0.0) && (bourbon1.dark_fruit < bourbon2.dark_fruit)
             dark_fruit_percentage_dif = dark_fruit_var / bourbon2.dark_fruit.to_f * 100
+            dark_fruit_similarity = 100 - dark_fruit_percentage_dif
         end
 
         if citrus_fruit_var == 0.0
             citrus_fruit_similarity = citrus_fruit_var + 100
         elsif (citrus_fruit_var != 0.0) && (bourbon1.citrus_fruit >= bourbon2.citrus_fruit)
             citrus_fruit_percentage_dif = citrus_fruit_var / bourbon1.citrus_fruit.to_f * 100
+            citrus_fruit_similarity = 100 - citrus_fruit_percentage_dif
         else (citrus_fruit_var != 0.0) && (bourbon1.citrus_fruit < bourbon2.citrus_fruit)
             citrus_fruit_percentage_dif = citrus_fruit_var / bourbon2.citrus_fruit.to_f * 100
+            citrus_fruit_similarity = 100 - citrus_fruit_percentage_dif
         end
 
         if floral_var == 0.0
             floral_similarity = floral_var + 100
         elsif (floral_var != 0.0) && (bourbon1.floral >= bourbon2.floral)
             floral_percentage_dif = floral_var / bourbon1.floral.to_f * 100
+            floral_similarity = 100 - floral_percentage_dif
         else (floral_var != 0.0) && (bourbon1.floral < bourbon2.floral)
             floral_percentage_dif = floral_var / bourbon2.floral.to_f * 100
+            floral_similarity = 100 - floral_percentage_dif
         end
 
         if spicy_var == 0.0
             spicy_similarity = spicy_var + 100
         elsif (spicy_var != 0.0) && (bourbon1.spicy >= bourbon2.spicy)
             spicy_percentage_dif = spicy_var / bourbon1.spicy.to_f * 100
+            spicy_similarity = 100 - spicy_percentage_dif
         else (spicy_var != 0.0) && (bourbon1.spicy < bourbon2.spicy)
             spicy_percentage_dif = spicy_var / bourbon2.spicy.to_f * 100
+            spicy_similarity = 100 - spicy_percentage_dif
         end
 
         if herbal_var == 0.0
             herbal_similarity = herbal_var + 100
         elsif (herbal_var != 0.0) && (bourbon1.herbal >= bourbon2.herbal)
             herbal_percentage_dif = herbal_var / bourbon1.herbal.to_f * 100
+            herbal_similarity = 100 - herbal_percentage_dif
         else (herbal_var != 0.0) && (bourbon1.herbal < bourbon2.herbal)
             herbal_percentage_dif = herbal_var / bourbon2.herbal.to_f * 100
+            herbal_similarity = 100 - herbal_percentage_dif
         end
 
         if malty_var == 0.0
             malty_similarity = malty_var + 100
         elsif (malty_var != 0.0) && (bourbon1.malty >= bourbon2.malty)
             malty_percentage_dif = malty_var / bourbon1.malty.to_f * 100
+            malty_similarity = 100 - malty_percentage_dif
         else (malty_var != 0.0) && (bourbon1.malty < bourbon2.malty)
             malty_percentage_dif = malty_var / bourbon2.malty.to_f * 100
+            malty_similarity = 100 - malty_percentage_dif
         end
-
-        # Divide the dif by the larger value of bourbon1/2 to get the % difference 
-        # if bourbon1.buttery >= bourbon2.toffee
-        #     toffee_percentage_dif = toffee_var / bourbon1.toffee.to_f * 100
-        # else bourbon1.toffee < bourbon2.toffee
-        #     toffee_percentage_dif = toffee_var / bourbon2.toffee.to_f * 100
-        # end
-
-        # if bourbon1.woody >= bourbon2.woody
-        #     woody_percentage_dif = woody / bourbon1 * 100
-        # else bourbon1.woody < bourbon2.woody
-        #     woody_percentage_dif = woody / bourbon2 * 100
-        # end
-
-        # if bourbon1.tannic >= bourbon2.tannic
-        #     tannic_percentage_dif = tannic / bourbon1 * 100
-        # else bourbon1.tannic < bourbon2.tannic
-        #     tannic_percentage_dif = tannic / bourbon2 * 100
-        # end
-
-        # if bourbon1.char >= bourbon2.char
-        #     char_percentage_dif = char / bourbon1 * 100
-        # else bourbon1.char < bourbon2.char
-        #     char_percentage_dif = char / bourbon2 * 100
-        # end
-
-        # if bourbon1.sweet >= bourbon2.sweet
-        #     sweet_percentage_dif = sweet / bourbon1 * 100
-        # else bourbon1.sweet < bourbon2.sweet
-        #     sweet_percentage_dif = sweet / bourbon2 * 100
-        # end
-
-        # if bourbon1.grainy >= bourbon2.grainy
-        #     grainy_percentage_dif = grainy / bourbon1 * 100
-        # else bourbon1.grainy < bourbon2.grainy
-        #     grainy_percentage_dif = grainy / bourbon2 * 100
-        # end
-
-        # if bourbon1.vanilla >= bourbon2.vanilla
-        #     vanilla_percentage_dif = vanilla / bourbon1 * 100
-        # else bourbon1.vanilla < bourbon2.vanilla
-        #     vanilla_percentage_dif = vanilla / bourbon2 * 100
-        # end
-
-        # if bourbon1.corny >= bourbon2.corny
-        #     corny_percentage_dif = corny / bourbon1 * 100
-        # else bourbon1.corny < bourbon2.corny
-        #     corny_percentage_dif = corny / bourbon2 * 100
-        # end
-
-        # if bourbon1.buttery >= bourbon2.buttery
-        #     buttery_percentage_dif = buttery / bourbon1 * 100
-        # else bourbon1.buttery < bourbon2.buttery
-        #     buttery_percentage_dif = buttery / bourbon2 * 100
-        # end
-
-        # if bourbon1.heat >= bourbon2.heat
-        #     heat_percentage_dif = heat / bourbon1 * 100
-        # else bourbon1.heat < bourbon2.heat
-        #     heat_percentage_dif = heat / bourbon2 * 100
-        # end
-
-        # if bourbon1.dark_fruit >= bourbon2.dark_fruit
-        #     dark_fruit_percentage_dif = dark_fruit / bourbon1 * 100
-        # else bourbon1.dark_fruit < bourbon2.dark_fruit
-        #     dark_fruit_percentage_dif = dark_fruit / bourbon2 * 100
-        # end
-
-        # if bourbon1.citrus_fruit >= bourbon2.citrus_fruit
-        #     citrus_fruit_percentage_dif = citrus_fruit / bourbon1 * 100
-        # else bourbon1.citrus_fruit < bourbon2.citrus_fruit
-        #     citrus_fruit_percentage_dif = citrus_fruit / bourbon2 * 100
-        # end
-
-        # if bourbon1.floral >= bourbon2.floral
-        #     floral_percentage_dif = floral / bourbon1 * 100
-        # else bourbon1.floral < bourbon2.floral
-        #     floral_percentage_dif = floral / bourbon2 * 100
-        # end
-
-        # if bourbon1.spicy >= bourbon2.spicy
-        #     spicy_percentage_dif = spicy / bourbon1 * 100
-        # else bourbon1.spicy < bourbon2.spicy
-        #     spicy_percentage_dif = spicy / bourbon2 * 100
-        # end
-
-        # if bourbon1.herbal >= bourbon2.herbal
-        #     herbal_percentage_dif = herbal / bourbon1 * 100
-        # else bourbon1.herbal < bourbon2.herbal
-        #     herbal_percentage_dif = herbal / bourbon2 * 100
-        # end
-
-        # if bourbon1.malty >= bourbon2.malty
-        #     malty_percentage_dif = malty / bourbon1 * 100
-        # else bourbon1.malty < bourbon2.malty
-        #     malty_percentage_dif = malty / bourbon2 * 100
-        # end
-
-        # Subtract each dif from 100 to get the final %, but if percentage_dif = 0 then add 100 first
-        # if toffee_percentage_dif == 0
-        #     toffee_similarty = toffee_percentage_dif + 100
-        # else
-        #     toffee_similarty = 100 - toffee_percentage_dif
-        # end
-     
-       # 0.28571429 * 100 = 28.57
-
-               # Bourbon.percent_difference(toffee)
-        # Bourbon.percent_difference(woody)
-        # Bourbon.percent_difference(tannic)
-        # Bourbon.percent_difference(char)
-        # Bourbon.percent_difference(sweet)
-        # Bourbon.percent_difference(grainy)
-        # Bourbon.percent_difference(vanilla)
-        # Bourbon.percent_difference(corny)
-        # Bourbon.percent_difference(buttery)
-        # Bourbon.percent_difference(heat)
-        # Bourbon.percent_difference(dark_fruit)
-        # Bourbon.percent_difference(citrus_fruit)
-        # Bourbon.percent_difference(floral)
-        # Bourbon.percent_difference(spicy)
-        # Bourbon.percent_difference(herbal)
-        # Bourbon.percent_difference(malty)
-    end
+        
+        results = (toffee_similarity + woody_similarity + tannic_similarity + char_similarity + sweet_similarity + grainy_similarity + vanilla_similarity + corny_similarity + buttery_similarity + heat_similarity + dark_fruit_similarity + citrus_fruit_similarity + floral_similarity + spicy_similarity + herbal_similarity + malty_similarity) / 16
+    end             
 
     # def self.percent_difference(var)
     #     if bourbon1.var >= bourbon2.var
