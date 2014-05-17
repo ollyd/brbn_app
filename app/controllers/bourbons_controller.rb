@@ -19,19 +19,17 @@ class BourbonsController < ApplicationController
      bourbon1 = Bourbon.find(params[:id])
      bourbons = Bourbon.all.where('id != ?', bourbon1.id)
      # store % scores after calculated in the .compare method
-     @results = {}
+     results = {}
      # loop through and compare each bourbon
      bourbons.each do |bourbon|
         score = Bourbon.compare(bourbon1, bourbon)
         # store each bourbon ID in the hash with score as the key
-        @results[score] = bourbon.id
+        results[score] = bourbon.id
      end
-     # show nearest high score
-     # @results.keys.max
-
+     # return result in json format
      respond_to do |format|
       format.html 
-      format.json { render json: @results }
+      format.json { render json: results.keys.max.to_i }
     end
   end
 

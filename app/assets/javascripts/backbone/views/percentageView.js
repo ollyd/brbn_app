@@ -6,17 +6,7 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
 
     initialize: function () {
     this.render();
-    this.bourbons = new BrbnApp.Collections.Bourbons();
-
-    // Need to create a function which iterates through every attribute and compares the values to every other bourbon.
-    // Then divides the values by one another and * 100 to give percentage diff. 100 - diff with give % similarity
-    // eg (brbn a, brbn b)
-    // brbn a = woody: 7
-    // brbn b = woody: 5
-    // a - b / a = 0.28571429
-    // 0.28571429 * 100 = 28.57
-    // 100 - 28.57 = 71.43 % similar
-    // do this for all attributes, then take the average similarity, and sort in ascending value
+    console.log(this.bourbons)
 
     // var self = this;
     // this.bourbons.fetch({
@@ -68,9 +58,9 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
 
         setInterval(function() {
           foreground.transition()
-               // .duration(750) 
+               .duration(2000) 
                .call(arcTween, 0.3 * τ);
-        }, 1500); 
+        }, 1000); 
 
         function arcTween(transition, newAngle) {
 

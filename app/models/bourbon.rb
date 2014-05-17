@@ -33,7 +33,7 @@ class Bourbon < ActiveRecord::Base
 
     has_many :ratings
 
-    #### SIMILARITY ALGORITH ####
+    #### SIMILARITY ALGORITHM ####
 
     def self.compare(bourbon1, bourbon2)
         # Subract one attribute value from the other to find the dif and use .abs to make number positive if needed
@@ -217,13 +217,4 @@ class Bourbon < ActiveRecord::Base
         
         results = (toffee_similarity + woody_similarity + tannic_similarity + char_similarity + sweet_similarity + grainy_similarity + vanilla_similarity + corny_similarity + buttery_similarity + heat_similarity + dark_fruit_similarity + citrus_fruit_similarity + floral_similarity + spicy_similarity + herbal_similarity + malty_similarity) / 16
     end             
-
-    # def self.percent_difference(var)
-    #     if bourbon1.var >= bourbon2.var
-    #         var_percentage_dif = var / bourbon1 * 100
-    #     else bourbon1.var < bourbon2.var
-    #         var_percentage_dif = var / bourbon2 * 100
-    #     end
-    #     var_percentage_dif
-    # end
 end
