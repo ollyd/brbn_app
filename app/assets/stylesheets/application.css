@@ -451,7 +451,7 @@ input#email,
 #password,
 #password_confirmation,
 #search {
-    width: 310px;
+  /*  width: 310px; */
 }
 
 input.btn-primary {

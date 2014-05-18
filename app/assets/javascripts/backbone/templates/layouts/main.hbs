@@ -3,24 +3,21 @@
     <div class="container">
         <img src="http://www.clker.com/cliparts/1/b/b/d/1248179380933577373whisky_glass.svg.med.png" id="logo">
         <div id="logo-name">↫Brbn↬</div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="widget padding-lg bg-dark">
-                    <div id="content">
-                        <form id="search-form" class="form-horizontal">
-                          <fieldset>
-                            <div id="search_group" class="control-group">
-                              <label class="control-label" for="search"></label>
-                              <div class="controls">
-                                <input id="search" name="search" type="search" required="required" placeholder="Search for bourbon goodness here..." />
-                              </div>
-                            </div>
-                            <div class="form-actions">
-                              <input type="submit" value="search" class="btn btn-primary" />
-                            </div>
-                          </fieldset>
-                        </form>
-
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="widget padding-lg bg-dark">
+                        <div class="col-lg-6">
+                            <div id="content">
+                                <form id="search-form" class="form-horizontal">
+                                    <div class="input-group">
+                                        <input id="search" type="search" class="form-control">
+                                        <span class="input-group-btn">
+                                        <input class="btn btn-default" type="submit" value="Search"/>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </form>
+                            </div>    
+                        </div><!-- /.col-lg-6 -->
                         <div id="bourbons">
                             <li><a href="#bourbons/{{ id }}">Name: {{name}}</a></li>
                         </div>
@@ -28,6 +25,5 @@
                 </div>
             </div>  
         </div>  
-       
     </div>
 </section>                      
