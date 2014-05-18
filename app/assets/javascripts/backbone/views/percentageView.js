@@ -6,17 +6,6 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
 
     initialize: function () {
     this.render();
-    console.log(this.bourbons)
-
-    // var self = this;
-    // this.bourbons.fetch({
-    //     success: function () {
-    //         self.bourbons.each(function (bourbon) {
-    //             console.log('bourbon', bourbon.attributes);
-    //             $('<li>' + bourbon.attributes + '</li>').appendTo('#main');//.data('bourbon-id', bourbon.attributes.id).appendTo('#main');
-    //         })
-    //     }
-    // });
 
         var $container = $('#percentage-container'),
             τ = 2 * Math.PI,
@@ -58,7 +47,7 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
 
         setInterval(function() {
           foreground.transition()
-               .duration(2000) 
+               .duration(1500) 
                .call(arcTween, 0.3 * τ);
         }, 1000); 
 

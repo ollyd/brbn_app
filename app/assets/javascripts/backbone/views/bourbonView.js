@@ -153,7 +153,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         path: 'assets/',
         width: 200
       });
-      console.log(data-score);
+      // console.log(data-score);
     },
 
     afterRender: function() {
@@ -161,7 +161,6 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
       console.log('in afterRender');
       var view = new BrbnApp.Views.percentageView();
       $('#percentage-container').append(view.render().el); 
-  
     }
     
 

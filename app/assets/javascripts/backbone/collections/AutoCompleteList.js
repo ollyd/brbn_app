@@ -4,4 +4,4 @@ var AutoCompleteList = Backbone.Collection.extend({
       parse: function(response) {
         return response;
       }
-    });
+});

@@ -1,27 +1,37 @@
 <section class="wrapper-md bg">
-    <div class="container">
+    <div class="container col-md-offset-1">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-10">
               <h2>{{ name }}</h2>
               <h5><div id="star">Avg Rating: </div></h5>
               <hr>
                   <div class="row">
                       <div id="bourbon">
-                          <div class="col-sm-12 col-md-6">
-                          <img src="{{ image }}" class="img-responsive">  
-                          </div>
-                              <div class="col-sm-12 col-md-6">
-                                  <div id="description">
-                                    <h3>Description</h3>
-                                  </div>
-                                  <p>{{ description }}</p>
-                                  <h5>Alcohol: {{ alcohol }}%</h5>
-                                    <div id="percentage-container"></div> 
+                          <div class="col-sm-12 col-md-5">
+                              <div class="widget padding-lg bg-dark">
+                                  <img src="{{ image }}" class="img-responsive">  
                                   <div class="col-md-4">
-                                    <button class="btn btn-success">Rate It</button>
+                                      <button class="btn btn-success">Rate It</button>
                                   </div>
                               </div>
+                          </div>
+                            <div class="col-sm-12 col-md-7">
+                                <div id="description">
+                                <h3>Description</h3>
+                                <hr>
+                                </div>
+                                <p>{{ description }}</p>
+                                <h5>Alcohol: {{ alcohol }}%</h5>
+                                <hr>
+                                <h4><span class="match">Most Similar Match:</span></h4>
+                                <div id="percentage-container"></div> 
+                                <h4><span class="match">{{ name }}</span></h4>
+                            </div> 
                       </div>
+                  </div>
+                  <hr>
+                   <div class="widget bg-secondary">
+                        <h3 class="text-center text-light">Bourbon Wheel Comparison</h3>
                   </div>
                   <div id="chart"></div>
                   <button class="btn btn-info"><a href='#'>Back</a></button> 

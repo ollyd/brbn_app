@@ -90,7 +90,7 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
-  margin: 50px;
+  /*margin: 50px;*/
 }
 figure {
   margin: 1em 40px;
@@ -318,6 +318,10 @@ img {
   max-width: 100%;
   height: auto;
   margin: auto;
+/*    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;*/
 }
 .img-rounded {
   border-radius: 0;
@@ -2125,8 +2129,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #43ac6a;
-  border-color: #3c9a5f;
+  background-color: #f08738;
+  border-color: #e86907;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2134,8 +2138,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #388f58;
-  border-color: #2b6e44;
+  background-color: #d9803c;
+  border-color: #8c4108;
 }
 .btn-success:active,
 .btn-success.active,

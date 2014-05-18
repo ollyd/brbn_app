@@ -11,8 +11,6 @@ BrbnApp.Routers.appRouter = Backbone.Router.extend({
   },
 
   showBourbon: function (id) {
-    console.log('showing', id);
-    // debugger;
     var bourbon = BrbnApp.brbns.get(id);
     new BrbnApp.Views.BourbonView({model:bourbon});
   },
