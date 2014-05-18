@@ -458,14 +458,21 @@ input.btn-primary {
     margin-top: 20px;
 }
 
-#bourbon {
-    max-width: 100%;
+#bourbons {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px 20px;
+    padding-bottom: 35px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
 #logo {
     max-width: 75px;
     height: 75px;
-    margin: 30px auto;
+    margin: 40px auto;
     display: block;
 }
 
@@ -474,8 +481,13 @@ input.btn-primary {
     font-size: 75px;
     height: 50px;
     text-align: center;
-    margin: 40px auto;
+    margin: 15px auto;
     display: block;
+}
+
+h5 .under-logo {
+    display: block;
+    text-align: center;
 }
 
 .fingerpoint {
@@ -486,7 +498,8 @@ input.btn-primary {
 
 #content {
   display: block;
-  width: 100%;
+  max-width: 600px;
+  margin: auto;
   padding: 25px 20px;
   padding-bottom: 35px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;

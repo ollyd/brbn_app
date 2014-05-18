@@ -14,12 +14,12 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
     this.modelBinder = new Backbone.ModelBinder();
     this.bourbons = new BrbnApp.Collections.Bourbons();
 
-    // Replace this with Marionette CollectionView 
+   // Replace this with Marionette CollectionView 
     var self = this;
     this.bourbons.fetch({
         success: function () {
             self.bourbons.each(function (b) {
-                $('<li>' + b.attributes.name + '</li>').data('bourbon-id', b.attributes.id).appendTo('#bourbons');
+                $('<li>' + b.attributes.name + '</li>').data('bourbon-id', b.attributes.id);
             })
         }
     });

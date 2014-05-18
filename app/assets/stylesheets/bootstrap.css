@@ -3439,6 +3439,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn > .btn:focus,
 .input-group-btn > .btn:active {
   z-index: 2;
+  background: #e8af84;
+  color: #fff;
 }
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
