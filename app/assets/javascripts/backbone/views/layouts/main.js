@@ -35,7 +35,7 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
     $('#bourbons').empty();
     var matches = [];
     var error;
-debugger;
+
     //When the user makes a search, display the title "Exact Match"
     $('.exact_match').show();   
     //If statement to check the inputs.
