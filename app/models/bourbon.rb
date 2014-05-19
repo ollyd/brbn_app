@@ -47,7 +47,6 @@ class Bourbon < ActiveRecord::Base
         end
         self.similarity = results.keys.max.to_i
         self.similar_id = results[results.keys.max]
-        # self.similar_name = results.keys
     end
 
     #### SIMILARITY ALGORITHM ####

@@ -12,7 +12,7 @@ class BourbonsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.json { render json: @bourbons, :include => [:ratings], :methods => [:similar_id, :similarity] }
+      format.json { render json: @bourbons, :include => [:ratings, :similar], :methods => [:similar_id, :similarity] }
     end
   end
 
@@ -39,7 +39,7 @@ class BourbonsController < ApplicationController
      # return result in json format
      respond_to do |format|
       format.html 
-      format.json { render json: bourbon1, :methods => [:similar_id, :similarity], :include => [:similar] } # results.keys.max.to_i }
+      format.json { render json: bourbon1, :methods => [:similar_id, :similarity], :include => [:similar] }
     end
   end
 

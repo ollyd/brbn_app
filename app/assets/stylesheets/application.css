@@ -111,7 +111,7 @@ body a:focus { color: #e8af84 }
     box-shadow: 0 1px 2px #19b698;
 }
 .bg-secondary {
-    background: #f08738;
+    background: rgba(78, 51, 21, 0.2);
     color: #fff;
     font-family: Enriqueta;
     height: 60px;
@@ -627,8 +627,22 @@ svg {
   margin: 0 auto;
 }
 
+#similar-name {
+    font-family: Enriqueta;
+    font-size: 20px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
+
 h4 .match {
     display: block;
+    text-align: center;
+}
+
+#user-rating {
+    display: block;
+    margin: auto;
     text-align: center;
 }
 

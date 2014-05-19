@@ -75,10 +75,7 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
       $('#bourbons').append(error);
     }
       $('#bourbons').fadeIn(1000);   
-      // $('#logo').fadeOut(500);
-      // $('#logo-name').animate({height:100},"slow");
-      // $('span.under-logo').slideUp(500);
-      // $('#content').slideUp(1000);
+     
   },
 
   onRender: function() {

@@ -10,10 +10,11 @@
                           <div class="col-sm-12 col-md-5">
                               <div class="widget padding-lg bg-dark">
                                   <img src="{{ image }}" class="img-responsive">  
-                                  <div class="col-md-4">
-                                      <button class="btn btn-success">Rate It</button>
-                                  </div>
-                              </div>
+                              </div>    
+                              <div class="col-md-12">
+                                  <button class="btn btn-success">Rate It</button>
+                                  <div id="user-rating" data-score="0"><h5>Your Rating: </h5></div>
+                              </div>  
                           </div>
                             <div class="col-sm-12 col-md-7">
                                 <div id="description">
@@ -25,7 +26,6 @@
                                 <hr>
                                 <h4><span class="match">Most Similar Recommended:</span></h4>
                                 <div id="percentage-container"></div> 
-                                <h4><span class="match">{{ name }}</span></h4>
                             </div> 
                       </div>
                   </div>
@@ -35,7 +35,7 @@
                   </div>
                   <div id="chart"></div>
                   <button class="btn btn-info"><a href='#'>Back</a></button> 
-                <div id="user-rating" data-score="0"></div>
+                
             </div>  
         </div>  
     </div>

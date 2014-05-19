@@ -62,7 +62,7 @@ b7 = Bourbon.create(:name => 'Jack Daniel\'s No.7', :alcohol => 40, :image => 'h
 
 b8 = Bourbon.create(:name => 'Gentleman Jack', :alcohol => 40, :image => 'http://en.abrandnewday.nl/wp-content/uploads/2011/10/JackGentleFLESkopie.png', 
     :description => 'Jack Daniel’s Single Barrel, Gentleman Jack is charcoal mellowed before going into the barrel. It, however, receives an additional blessing when it is charcoal mellowed again after reaching maturity – making it the only whiskey in the world to be charcoal mellowed twice, giving it ultimate smoothness. Gentleman Jack is full-bodied with fruit and spices, and its finish is silky, warm, and pleasant.', 
-    :toffee => 1, :woody => 3, :tannic => 3, :char => 3, :sweet => 5, :grainy => 7, :vanilla => 3, :corny => 3, :buttery => 3, 
+    :toffee => 1, :woody => 3, :tannic => 3, :char => 3, :sweet => 7, :grainy => 7, :vanilla => 4, :corny => 3, :buttery => 4, 
     :heat => 6, :dark_fruit => 1, :citrus_fruit => 4, :floral => 1, :spicy => 3, :herbal => 3, :malty => 6)
 
 b9 = Bourbon.create(:name => 'Jack Daniel’s Tennessee Honey', :alcohol => 35, :image => 'http://www.cheapwinefinder.com/wp-content/uploads/2013/07/jack-daniels-honey.png', 

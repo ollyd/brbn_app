@@ -4,6 +4,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
   template: 'bourbonView',
 
   events: {
+    'click a': 'viewBourbon',
     'click': 'rateBourbon'
   },
 
@@ -18,7 +19,8 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
       starTotal += this.model.attributes.ratings[i].score;
   }   
   var starAvg = starTotal / this.model.attributes.ratings.length;
-      
+     
+  $('#user-rating').hide();    
   // Display bourbon star rating 
     $('#star').raty({
       path: 'assets/',
@@ -37,10 +39,11 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         h = 500;
 
     var colorscale = d3.scale.category10();
-
-    //Legend titles
-    var LegendOptions = [this.model.attributes.name,'Bourbon B'];
-
+// debugger;
+    var similar = BrbnApp.brbns.get(this.model.attributes.similar_id);
+    var similarName = similar.attributes.name
+    //Legend titles    
+    var LegendOptions = [this.model.attributes.name, similarName];
     //Data
     var d = [
           [
@@ -61,22 +64,22 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
           {axis:"herbal",value: this.model.attributes.herbal / 10},
           {axis:"malty",value: this.model.attributes.malty / 10},
           ],[
-          {axis:"toffee",value:0.48},
-          {axis:"woody",value:0.91},
-          {axis:"tannic",value:0.27},
-          {axis:"char",value:0.28},
-          {axis:"sweet",value:0.46},
-          {axis:"grainy",value:0.29},
-          {axis:"vanilla",value:0.81},
-          {axis:"corny",value:0.34},
-          {axis:"buttery",value:0.65},
-          {axis:"heat",value:0.19},
-          {axis:"dark_fruit",value:0.14},
-          {axis:"citrus_fruit",value:0.06},
-          {axis:"floral",value:0.24},
-          {axis:"spicy",value:0.67},
-          {axis:"herbal",value:0.25},
-          {axis:"malty",value:0.42},
+          {axis:"toffee",value: similar.attributes.toffee / 10 },
+          {axis:"woody",value: similar.attributes.woody / 10},
+          {axis:"tannic",value: similar.attributes.tannic / 10},
+          {axis:"char",value: similar.attributes.toffee / 10},
+          {axis:"sweet",value: similar.attributes.sweet / 10},
+          {axis:"grainy",value: similar.attributes.grainy / 10},
+          {axis:"vanilla",value: similar.attributes.vanilla / 10},
+          {axis:"corny",value: similar.attributes.corny / 10},
+          {axis:"buttery",value: similar.attributes.buttery / 10},
+          {axis:"heat",value: similar.attributes.heat / 10},
+          {axis:"dark fruit",value: similar.attributes.dark_fruit / 10},
+          {axis:"citrus fruit",value: similar.attributes.citrus_fruit / 10},
+          {axis:"floral",value: similar.attributes.floral / 10},
+          {axis:"spicy",value: similar.attributes.spicy / 10},
+          {axis:"herbal",value: similar.attributes.herbal / 10},
+          {axis:"malty",value: similar.attributes.malty / 10},
           ]
         ];
 
@@ -102,14 +105,14 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
       .attr("height", h)
 
     //Create the title for the legend
-    var text = svg.append("text")
-      .attr("class", "title")
-      .attr('transform', 'translate(90,0)') 
-      .attr("x", w - 70)
-      .attr("y", 10)
-      .attr("font-size", "12px")
-      .attr("fill", "#404040")
-      .text("Bourbon flavour wheel");
+    // var text = svg.append("text")
+    //   .attr("class", "title")
+    //   .attr('transform', 'translate(90,0)') 
+    //   .attr("x", w - 70)
+    //   .attr("y", 10)
+    //   .attr("font-size", "12px")
+    //   .attr("fill", "#404040")
+    //   .text("Bourbon flavour wheel");
         
     //Initiate Legend 
     var legend = svg.append("g")
@@ -146,19 +149,27 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
     rateBourbon: function () {
       event.preventDefault();
       // this.$el.append(
+      $('button.btn.btn-success').slideUp('slow');  
+      $('#user-rating').fadeIn(1500);  
       $('#user-rating').raty({
         score: function() {
           return $(this).attr('data-score');
         },
         path: 'assets/',
-        width: 200
+        width: 260
       });
       // console.log(data-score);
     },
 
+    viewBourbon: function (event) {
+      var id = $(event.target).data('bourbon-id');
+      if (id) {
+        BrbnApp.router.navigate('bourbons/' + id, true);
+        return false;
+      }
+    },
+
     afterRender: function() {
-      // debugger;
-      console.log('in afterRender');
       var view = new BrbnApp.Views.percentageView({model:this.model});
       $('#percentage-container').append(view.render().el); 
     }
