@@ -31,7 +31,24 @@ class Bourbon < ActiveRecord::Base
     attr_accessible :name, :alcohol, :image, :description, :toffee, :woody, :tannic, :char, :sweet, :grainy, :vanilla, :corny, :buttery,
     :heat, :dark_fruit, :citrus_fruit, :floral, :spicy, :herbal, :malty
 
+    attr_accessor :similar_id, :similarity, :similar
+
     has_many :ratings
+
+    def find_similar
+        bourbons = Bourbon.all.where('id != ?', self.id)
+        results = {}
+        # loop through and compare each bourbon
+        bourbons.each do |bourbon|
+            score = Bourbon.compare(self, bourbon)
+            # store each bourbon ID in the hash with score as the key
+            results[score] = bourbon.id
+            results[bourbon.id] = bourbon.name
+        end
+        self.similarity = results.keys.max.to_i
+        self.similar_id = results[results.keys.max]
+        # self.similar_name = results.keys
+    end
 
     #### SIMILARITY ALGORITHM ####
 

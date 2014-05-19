@@ -45,25 +45,19 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
             .style("fill", "#98dd7c")
             .attr("d", arc);
 
+        var view = this;
         setInterval(function() {
-          foreground.transition()
+        foreground.transition()
                .duration(1500) 
-               .call(arcTween, 0.3 * τ);
+               .call(arcTween, (view.model.attributes.similarity / 100) * τ);
         }, 1000); 
 
         function arcTween(transition, newAngle) {
-
             transition.attrTween("d", function(d) {
-        
                 var interpolate = d3.interpolate(d.endAngle, newAngle);
-                
                 return function(t) {
-                    
                     d.endAngle = interpolate(t);
-                    
                     text.text(Math.round((d.endAngle/τ)*100)+'%');
-                    // text.text('Match');
-                    
                     return arc(d);
                 };
             });

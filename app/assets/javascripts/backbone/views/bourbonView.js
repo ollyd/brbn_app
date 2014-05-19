@@ -12,7 +12,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
   this.listenTo(this, 'render', this.afterRender);
   this.render();
 
-  // Work out the average user ratings for the borubon being shown 
+  // Work out the average user ratings for the bourbon being shown 
   var starTotal = 0;
   for (var i = 0; i < this.model.attributes.ratings.length; i++) {
       starTotal += this.model.attributes.ratings[i].score;
@@ -159,7 +159,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
     afterRender: function() {
       // debugger;
       console.log('in afterRender');
-      var view = new BrbnApp.Views.percentageView();
+      var view = new BrbnApp.Views.percentageView({model:this.model});
       $('#percentage-container').append(view.render().el); 
     }
     

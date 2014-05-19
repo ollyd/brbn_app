@@ -6,9 +6,13 @@ class BourbonsController < ApplicationController
   def index
     @bourbons = Bourbon.all
 
+    @bourbons.each do |bourbon|
+      bourbon.find_similar
+    end
+
     respond_to do |format|
       format.html 
-      format.json { render json: @bourbons, :include => [:ratings] }
+      format.json { render json: @bourbons, :include => [:ratings], :methods => [:similar_id, :similarity] }
     end
   end
 
@@ -25,11 +29,17 @@ class BourbonsController < ApplicationController
         score = Bourbon.compare(bourbon1, bourbon)
         # store each bourbon ID in the hash with score as the key
         results[score] = bourbon.id
+        results[bourbon.id] = bourbon.name
      end
+
+     bourbon1.similarity = results.keys.max.to_i
+     bourbon1.similar_id = results[results.keys.max]
+     bourbon1.similar = Bourbon.find bourbon1.similar_id
+
      # return result in json format
      respond_to do |format|
       format.html 
-      format.json { render json: results.keys.max.to_i }
+      format.json { render json: bourbon1, :methods => [:similar_id, :similarity], :include => [:similar] } # results.keys.max.to_i }
     end
   end
 
