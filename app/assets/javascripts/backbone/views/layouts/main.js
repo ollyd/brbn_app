@@ -65,10 +65,17 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
       $('#bourbons').append("Your search is empty, please try again")
     }
 
+debugger;
+    var self = this;
+    var similar = self.model.get(self.bourbons.attributes.name);
+
     //If the matches array has matching bourbons inside, display these bourbons, otherwise, display the error message.
     if (matches.length > 0) {
     $.each(matches, function(index, brbn){
+      $('<li>' + 'Your Choice:' + '</li>').appendTo('#bourbons')
       $('<li>' + brbn.attributes.name + '</li>').data('bourbon-id', brbn.attributes.id).appendTo('#bourbons');
+      $('<li>' + 'Similar Bourbons:' + '</li>').appendTo('#bourbons')
+      // $('<li>' + brbn.attributes.all_similar.name + '</li>').data('bourbon-id', brbn.attributes.id).appendTo('#bourbons');
     });
   
     } else {

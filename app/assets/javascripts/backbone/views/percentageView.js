@@ -1,7 +1,5 @@
 BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
     tagName: 'div', 
-    // el: 'percentage-container',
-
     template: 'percentageView',
     events: {
         'click a': 'viewBourbon'
@@ -70,10 +68,5 @@ BrbnApp.Views.percentageView = Backbone.Marionette.ItemView.extend({
                 };
             });
         }
-        // $('#percentage-container').append('<div id="similar-name">' + similarName + '</div>');
     },
-
-    // viewBourbon: function (){ 
-    //     BrbnApp.router.navigate('bourbons/' + $(event.target).data('bourbon-id'), true);
-    // } 
 });

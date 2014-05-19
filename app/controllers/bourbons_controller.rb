@@ -12,7 +12,7 @@ class BourbonsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.json { render json: @bourbons, :include => [:ratings, :similar], :methods => [:similar_id, :similarity] }
+      format.json { render json: @bourbons, :include => [:ratings, :similar], :methods => [:similar_id, :similarity, :all_similar] }
     end
   end
 

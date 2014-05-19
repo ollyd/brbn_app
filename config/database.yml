@@ -15,10 +15,10 @@ development:
 #   username: brbn_app
 #   password:
 
-# production:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: brbn_app_production
-#   pool: 5
-#   username: brbn_app
-#   password:
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: brbn_app_production
+  pool: 5
+  username: Olly
+  password:

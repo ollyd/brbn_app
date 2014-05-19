@@ -31,7 +31,7 @@ class Bourbon < ActiveRecord::Base
     attr_accessible :name, :alcohol, :image, :description, :toffee, :woody, :tannic, :char, :sweet, :grainy, :vanilla, :corny, :buttery,
     :heat, :dark_fruit, :citrus_fruit, :floral, :spicy, :herbal, :malty
 
-    attr_accessor :similar_id, :similarity, :similar
+    attr_accessor :similar_id, :similarity, :similar, :all_similar
 
     has_many :ratings
 
@@ -43,8 +43,9 @@ class Bourbon < ActiveRecord::Base
             score = Bourbon.compare(self, bourbon)
             # store each bourbon ID in the hash with score as the key
             results[score] = bourbon.id
-            results[bourbon.id] = bourbon.name
+            # results[bourbon.id] = bourbon.name
         end
+        self.all_similar = results.keys
         self.similarity = results.keys.max.to_i
         self.similar_id = results[results.keys.max]
     end

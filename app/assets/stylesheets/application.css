@@ -21,13 +21,16 @@ body {
   height:100%;
 }
 
-body a { color: #16a085 }
+body a { color: #16a085;
+        text-align: center;
+     }
 body a:hover,
-body a:focus { color: #e8af84 }
+/*body a:focus { color: #e8af84 }*/
 .countdown {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    text-decoration: none;
 }
 .date-digit,
 .date-text {
@@ -469,6 +472,13 @@ input.btn-primary {
     margin: auto;
     padding: 35px 20px;
     padding-bottom: 35px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#bourbons li {
+    margin: 25px;
 }
 
 #logo {
@@ -644,5 +654,17 @@ h4 .match {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+#bourbon-link a {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #454c54;
+}
+
+#bourbon-link a:hover {
+    color: #f08738;
 }
 

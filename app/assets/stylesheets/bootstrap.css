@@ -46,10 +46,13 @@ template {
 }
 a {
   background: transparent;
+  outline: none;
+  font-family: Enriqueta;
 }
 a:active,
 a:hover {
-  outline: 0;
+  outline: none;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: 1px dotted;
