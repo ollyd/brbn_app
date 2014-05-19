@@ -65,9 +65,9 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
       $('#bourbons').append("Your search is empty, please try again")
     }
 
-debugger;
-    var self = this;
-    var similar = self.model.get(self.bourbons.attributes.name);
+// debugger;
+//     var self = this;
+//     var similar = self.model.get(self.bourbons.attributes.name);
 
     //If the matches array has matching bourbons inside, display these bourbons, otherwise, display the error message.
     if (matches.length > 0) {
