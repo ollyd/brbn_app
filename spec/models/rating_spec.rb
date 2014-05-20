@@ -10,10 +10,11 @@
 #  updated_at :datetime
 #
 
-class Rating < ActiveRecord::Base
-    attr_accessible :score, :bourbon_id, :user_id
+require 'spec_helper'
+
+describe Rating do
     
-    belongs_to :user
-    belongs_to :bourbon
-    
+    it { should belong_to :user }
+    it { should belong_to :bourbon }
+
 end
