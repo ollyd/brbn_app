@@ -148,7 +148,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     rateBourbon: function () {
       event.preventDefault();
-      debugger;
+      // debugger;
       $('button.btn.btn-success').slideUp('slow');  
       $('#user-rating').fadeIn(1500);  
       $('#user-rating').raty({
