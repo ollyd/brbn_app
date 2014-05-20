@@ -30,6 +30,8 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
     bourbonList.fetch({async: false});
     var bourbonNames = bourbonList.pluck("name");
 
+    console.log('autocomplete for', $('#search'), bourbonNames);
+
     $("#search").autocomplete({ 
       source : bourbonNames,
       minLength : 2,
