@@ -81,7 +81,7 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
       
       // var similar = brbn.attributes.all_similar;
       $('<li>' + 'Similar' + '</li>').appendTo('#bourbons')
-      // $('<li>' + similar + '</li>').data('bourbon-id', brbn.attributes.id).appendTo('#bourbons');
+      $('<li>' + similar + '</li>').data('bourbon-id', brbn.attributes.id).appendTo('#bourbons');
     });
   
     } else {
