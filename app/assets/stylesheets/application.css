@@ -438,7 +438,7 @@ h6.heading-lg,
 }
 
 #unauthenticated-view-container {
-    max-width: 480px;
+    max-width: 680px;
     margin: 15px auto;
     padding: 20px;
     background: white;
@@ -667,4 +667,10 @@ h4 .match {
 #bourbon-link a:hover {
     color: #f08738;
 }
+
+#logincontrols, 
+#home-link {
+    margin: 20px;
+}
+
 
