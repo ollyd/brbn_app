@@ -29,10 +29,10 @@ class BourbonsController < ApplicationController
         score = Bourbon.compare(bourbon1, bourbon)
         # store each bourbon ID in the hash with score as the key
         results[score] = bourbon.id
-        results[bourbon.id] = bourbon.name
+        # results[bourbon.id] = bourbon.name
      end
 
-     bourbon1.similarity = results.keys.max.to_i
+     bourbon1.similarity = results.sort.reverse.first(3)
      bourbon1.similar_id = results[results.keys.max]
      bourbon1.similar = Bourbon.find bourbon1.similar_id
 

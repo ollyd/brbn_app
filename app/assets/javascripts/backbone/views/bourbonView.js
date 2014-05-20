@@ -5,7 +5,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
   events: {
     'click a': 'viewBourbon',
-    'click': 'rateBourbon'
+    'click button.btn.btn-success': 'rateBourbon'
   },
 
   initialize: function () {
@@ -39,7 +39,7 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         h = 500;
 
     var colorscale = d3.scale.category10();
-// debugger;
+
     var similar = BrbnApp.brbns.get(this.model.attributes.similar_id);
     var similarName = similar.attributes.name
     //Legend titles    
@@ -158,7 +158,6 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         path: 'assets/',
         width: 260
       });
-      // console.log(data-score);
     },
 
     viewBourbon: function (event) {

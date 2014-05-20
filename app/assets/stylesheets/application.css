@@ -512,7 +512,7 @@ li {
     -moz-transition:.5s;
     -webkit-transition:.5s;
     /* ...and now for the proper property */
-     transition:.5s;
+     transition:.3s;
 }
 
 li:hover {
@@ -673,4 +673,26 @@ h4 .match {
     margin: 20px;
 }
 
+/*
+.similar-bourbons li:hover {
+    color: white;
+     background: rgba(78, 51, 21, 0.1);
+}*/
+
+.bourbonlist {
+    font-size: 22px;
+    font-family: Enriqueta;
+}
+
+#thumb-container {
+    height: 75px;
+    width: 75px;
+}
+
+li img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    /*clip:rect(20px,0px,200px,0px);*/
+}
 

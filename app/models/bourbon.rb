@@ -45,8 +45,8 @@ class Bourbon < ActiveRecord::Base
             results[score] = bourbon.id
             # results[bourbon.id] = bourbon.name
         end
-        self.all_similar = results
-        self.similarity = results.keys.max.to_i
+        # self.all_similar = results.sort.reverse.first(3)
+        self.similarity = results.sort.reverse.first(3)
         self.similar_id = results[results.keys.max]
     end
 
