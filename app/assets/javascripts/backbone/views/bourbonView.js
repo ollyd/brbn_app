@@ -5,7 +5,8 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
   events: {
     'click a': 'viewBourbon',
-    'click button.btn.btn-success': 'rateBourbon'
+    'click button.btn.btn-success': 'rateBourbon',
+    'click #user-rating': 'savedScore'
   },
 
   initialize: function () {
@@ -20,13 +21,16 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
   }   
   var starAvg = starTotal / this.model.attributes.ratings.length;
      
-  $('#user-rating').hide();    
+   
   // Display bourbon star rating 
     $('#star').raty({
       path: 'assets/',
       readOnly: true, score: starAvg,
       width: 200
     });
+
+    $('#user-rating').hide();   
+
 
   //////////////////////////////////////
   //////// BOURBON WHEEL CHART ////////
@@ -148,7 +152,6 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
 
     rateBourbon: function () {
       event.preventDefault();
-      // debugger;
       $('button.btn.btn-success').slideUp('slow');  
       $('#user-rating').fadeIn(1500);  
       $('#user-rating').raty({
@@ -158,6 +161,15 @@ BrbnApp.Views.BourbonView = Backbone.Marionette.ItemView.extend({
         path: 'assets/',
         width: 260
       });
+    },
+
+    savedScore: function () {
+      event.preventDefault();
+      score = new BrbnApp.Models.Rating({
+        score: $('#user-rating').raty('score')
+      });
+      score.save();
+      $('#user-rating').fadeOut(1500);
     },
 
     viewBourbon: function (event) {
