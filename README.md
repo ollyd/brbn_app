@@ -17,6 +17,7 @@ Brbn solves this problem by allowing you to search for the bourbon you love dear
 - Marionette
 - Backbone
 - ModelBinder
+- jQuery
 - Handlebars
 - Bootstrap
 
@@ -74,8 +75,8 @@ Rails Models:
 --------------
 ## To Do
 
-- Add view for user comments, for each bourbon
-- Functionality to search for bourbons by falvour notes, not just by brand
+- Fucntionality for user comments, for each bourbon
+- Functionality to search for bourbons by flavour notes, not just by brand
 - User ratings saving to db
 - Add more bourbons to db
 - Admin/user authentication
