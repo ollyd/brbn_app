@@ -44,7 +44,7 @@ Rails Models:
 - Rating, (belongs_to :user, belongs_to :bourbon)
 - User, (has_many :ratings)
 
-####Gems:
+####Gems
 
 - jquery-ui-rails
 - therubyracer
