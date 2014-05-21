@@ -25,22 +25,9 @@ BrbnApp.addRegions({
   main: '#main'
 });
 
-// BrbnApp.vent.on("authentication:logged_in", function() {
-//   BrbnApp.main.show(BrbnApp.layouts.main);
-// });
-
-// BrbnApp.vent.on("authentication:logged_out", function() {
-//   BrbnApp.main.show(BrbnApp.layouts.unauthenticated);
-// });
 
 BrbnApp.bind("initialize:after", function() {
   BrbnApp.main.show(BrbnApp.layouts.main);
-  // if(BrbnApp.currentUser) {
-  //   BrbnApp.vent.trigger("authentication:logged_in");
-  // }
-  // else {
-  //   BrbnApp.vent.trigger("authentication:logged_out");
-  // }
 });
 
 // Instantiate router once data has been fetched, then listen for URL changes

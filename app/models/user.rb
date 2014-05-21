@@ -26,7 +26,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :image
 
   has_many :ratings
-  has_many :comments
 
   #validation for username
   #username must be populated, a minimum of 5 characters, maximum of 16 characters and is unique

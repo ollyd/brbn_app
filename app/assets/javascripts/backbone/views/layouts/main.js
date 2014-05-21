@@ -91,7 +91,6 @@ BrbnApp.Views.Layouts.Main = Backbone.Marionette.Layout.extend({
       $('#bourbons').append(error);
     }
       $('#bourbons').fadeIn(1000);   
-     
   },
 
   onRender: function() {
