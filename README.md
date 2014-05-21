@@ -46,32 +46,30 @@ Rails Models:
 
 Gems:
 
-jquery-ui-rails
-therubyracer
-bootstrap-sass
-protected_attributes
-rails_12factor
-thread_safe', '0.2.0
-devise
-rails-backbone
-modernizr-rails
-underscore-rails
-handlebars_assets
+- jquery-ui-rails
+- therubyracer
+- bootstrap-sass
+- protected_attributes
+- rails_12factor
+- thread_safe', '0.2.0
+- devise
+- rails-backbone
+- modernizr-rails
+- underscore-rails
+- handlebars_assets
 
+#####Development
+- pry-rails
+- gry-debugger
+- pry-stack_explorer
+- better_errors
+- annotate
 
-group :development
-    pry-rails
-    gry-debugger
-    pry-stack_explorer
-    better_errors
-    annotate
-end
+#####Test
+- rspec-rails
+- shoulda-matchers
+- simplecov
 
-group :test
-    rspec-rails
-    shoulda-matchers
-    simplecov
-end
 
 --------------
 ## To Do
