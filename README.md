@@ -45,6 +45,11 @@ Rails Models:
 - Rating, (belongs_to :user, belongs_to :bourbon)
 - User, (has_many :ratings)
 
+####Frameworks
+
+- D3js
+- Raty
+
 ####Gems
 
 - jquery-ui-rails
